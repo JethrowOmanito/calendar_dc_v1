@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./CheckCleanerSchedule.css";
+import { useNavigate } from "react-router-dom";
 import {
   fetchServices,
   fetchCleaners,
@@ -24,6 +25,7 @@ const CheckCleanerSchedule = () => {
   const [error, setError] = useState(null);
   const [isServiceConfirmed, setIsServiceConfirmed] = useState(false);
   const [showFree, setShowFree] = useState(true); // For Float free/busy toggle
+  const navigate = useNavigate();
 
   // Handle service selection with checkboxes
   const toggleServiceSelection = (service, isChecked) => {
@@ -126,7 +128,7 @@ const CheckCleanerSchedule = () => {
         <div className="ccs-header-row">
         <div
           className="ccs-dashboard-circle"
-          onClick={() => window.location.href = "/dashboard"}
+          onClick={() => navigate("/dashboard")}
           title="Go to Dashboard"
           tabIndex={0}
           style={{ cursor: "pointer" }}
