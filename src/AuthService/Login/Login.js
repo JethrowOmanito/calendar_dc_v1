@@ -90,14 +90,14 @@ const Login = ({ setUser }) => {
                 className={styles.inputField}
               />
               <div className={styles.forgotPassword}>
-                <a href="/forgot-password">Forgot password?</a>
+                <a href="/">Forgot password?</a>
               </div>
               <button type="submit" className={styles.loginButton}>Log In</button>
             </form>
           )}
 
           <p className={styles.signupText}>
-            Don't have an account? <a href="/signup">Sign up</a>
+            Don't have an account? <a href="/">Sign up</a>
           </p>
         </div>
 

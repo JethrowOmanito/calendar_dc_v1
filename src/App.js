@@ -4,9 +4,9 @@ import Login from "./AuthService/Login/Login";
 import Dashboard from "./Dashboard/Dashboard";
 import CreateEvent from "./Dashboard/CreateEvent/CreateEvent";
 import CheckAvailability from "./Header/CheckAvailability";
-import SearchPage from "./Header/SearchPage"; // ✅ Import the SearchPage component
-import SettingsPage from "./Header/SettingsPage"; // ✅ Import the SettingsPage
-import ConvertExcel from "./Header/ConvertExcel"; // ✅ Import the ConvertExcel component
+import SearchPage from "./Header/SearchPage";
+import SettingsPage from "./Header/SettingsPage";
+import ConvertExcel from "./Header/ConvertExcel";
 import CheckCleanerSchedule from "./Header/CheckCleanerSchedule";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     if (!user) {
-      localStorage.removeItem("user"); // Ensure user data is cleared on logout
+      localStorage.removeItem("user");
     }
   }, [user]);
 
@@ -93,7 +93,7 @@ function App() {
           )}
         />
 
-        {/* ✅ Convert Excel Route */}
+        {/* Convert Excel Route */}
         <Route 
           path="/convert-excel" 
           element={user ? (
@@ -101,6 +101,12 @@ function App() {
           ) : (
             <Navigate to="/" replace />
           )}
+        />
+
+        {/* 404 Not Found Route */}
+        <Route 
+          path="*"
+          element={<Navigate to={user ? "/dashboard" : "/"} replace />}
         />
       </Routes>
     </Router>
