@@ -1,0 +1,76 @@
+.toggle-container {
+    display: flex;
+    position: relative;
+    width: 160px; /* Adjusted for only 2 buttons */
+    height: 40px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .toggle-slider {
+    position: absolute;
+    width: 50%; /* Adjusted for 2 options */
+    height: 100%;
+    background: #007bff;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .toggle-button {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100%; /* Ensure buttons take full height */
+    line-height: 40px; /* Match the height of the toggle */
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+    padding: 0; /* Ensure no extra space */
+    margin-bottom: 15px;
+}
+
+  
+  .toggle-button.active {
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .toggle-container {
+      width: 100px;
+      height: 32px;
+      border-radius: 16px;
+    }
+    .toggle-slider {
+      border-radius: 16px;
+    }
+    .toggle-button {
+      font-size: 12px;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .toggle-container {
+      width: 80px;
+      height: 28px;
+      border-radius: 14px;
+    }
+    .toggle-slider {
+      border-radius: 14px;
+    }
+    .toggle-button {
+      font-size: 11px;
+      line-height: 28px;
+      margin-bottom: 6px;
+    }
+  }

@@ -1,0 +1,142 @@
+.view-cleaners-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.view-cleaners-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-weight: 500;
+}
+
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table thead {
+  background-color: #f5f5f5;
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+table tr:hover {
+  background-color: #f0f8ff;
+}
+
+.cleaner-status {
+  padding: 0.3em 0.8em;
+  border-radius: 12px;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #fff;
+  background: #28a745;
+  display: inline-block;
+}
+
+.cleaner-status.inactive {
+  background: #bdbdbd;
+  color: #444;
+}
+
+.cleaner-status.onleave {
+  background: #ffc107;
+  color: #333;
+}
+
+.cleaner-status.terminated {
+  background: #dc3545;
+  color: #fff;
+}
+
+.no-cleaners-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   MEDIA QUERIES SECTION
+   ========================= */
+
+@media (max-width: 900px) {
+  .view-cleaners-container {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    border-radius: 8px;
+  }
+  .view-cleaners-container h2 {
+    font-size: 1.3rem;
+  }
+  table th,
+  table td {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .view-cleaners-container {
+    max-width: 100vw;
+    margin: 10px 0;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .view-cleaners-container h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+  .form-group {
+    margin-bottom: 0.7rem;
+  }
+  .form-group label {
+    font-size: 0.97rem;
+  }
+  select {
+    font-size: 0.97rem;
+    padding: 0.6rem 0.7rem;
+    border-radius: 5px;
+  }
+  table th,
+  table td {
+    padding: 0.35rem 0.2rem;
+    font-size: 0.95rem;
+  }
+  .no-cleaners-message {
+    font-size: 0.98rem;
+    margin: 1rem 0;
+  }
+}

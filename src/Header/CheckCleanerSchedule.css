@@ -1,0 +1,585 @@
+/* General Container */
+.ccs-container {    /* Set your preferred max width */
+  margin: 40px auto;      /* Center horizontally */
+  padding: 32px 24px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15), 0 1.5px 6px rgba(0,0,0,0.07);
+  box-sizing: border-box;
+}
+.ccs-header-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  min-height: 48px;
+}
+
+.ccs-dashboard-circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #1976d2;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.ccs-title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+  
+  /* Title */
+  .ccs-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Step Subtitle */
+  .ccs-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .ccs-step .ccs-subtitle i.fa-users + span,
+  .ccs-step .ccs-subtitle:has(.fa-users) {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: -10px;
+}
+  
+  /* Selected Service Text */
+  .ccs-selected-service {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Services List */
+  .ccs-services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .ccs-service-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ccs-service-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* View Options */
+  .ccs-view-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .ccs-view-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ccs-view-button:hover {
+    background-color: #1e7e34;
+  }
+  
+  /* Summary Section */
+  .ccs-summary {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Reset Button */
+  .ccs-reset-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ccs-reset-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Loading and Error States */
+  .ccs-loading,
+  .ccs-error {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .ccs-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .ccs-calendar-day {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    background-color: #f9f9f9;
+    min-height: 120px; /* Increase height to fit multiple events */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .ccs-calendar-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  .ccs-calendar-cleaners {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .ccs-calendar-event {
+    margin-top: 5px;
+    font-size: 0.9em;
+    background-color: #e6f7ff;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #91d5ff;
+  }
+
+  .ccs-export-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .ccs-export-button:hover {
+    background-color: #45a049;
+  }
+
+  /* Card Layout for Steps */
+/* Step Card */
+.ccs-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtitle */
+.ccs-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+  
+  /* Selection Buttons */
+  .ccs-selection-type {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .ccs-selection-button {
+    font-size: 0.98rem;
+    line-height: 1.1;
+    padding: 7px 18px;
+    height: auto;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+  }
+  
+  .ccs-selection-button:hover {
+    background-color: #e6f7ff;
+    border-color: #91d5ff;
+    color: #007bff;
+  }
+  
+  .ccs-selection-button.ccs-selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }
+  
+  /* Cleaners List */
+  .ccs-cleaners-list {
+    display: flex;
+    flex-wrap: column;
+    gap: 20px;
+  }
+  
+  .ccs-cleaner-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    color: #333;
+    margin-left: 20px;
+  }
+
+  .ccs-subtitle-schedule {
+    font-size: 1rem;
+    line-height: 1;
+    margin-left: 30px;
+  }
+  
+  .ccs-cleaner-item input {
+    margin-right: 5px;
+  }
+  
+  /* Date Picker */
+  .ccs-date-picker {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .ccs-date-label {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    padding-left: 10px;
+  }
+
+  
+  .ccs-date-input {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .ccs-date-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .ccs-confirm-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ccs-confirm-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .ccs-confirm-button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+
+  /* Dropdown */
+.ccs-service-dropdown {
+  margin-bottom: 20px;
+}
+
+.ccs-service-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.ccs-service-select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Selected Services */
+.ccs-selected-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ccs-selected-service-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduce spacing between text and remove button */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px; /* Reduce padding */
+  font-size: 0.9rem; /* Reduce font size */
+  color: #333;
+  position: relative;
+  max-width: 200px; /* Optional: Limit the width */
+  word-wrap: break-word; /* Handle long service names */
+}
+
+.ccs-remove-button {
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #dc3545; /* Red border */
+  color: #dc3545; /* Red text */
+  font-size: 0.9rem; /* Adjust font size */
+  padding: 2px 6px; /* Add padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: -1px;
+}
+
+.ccs-remove-button:hover {
+  background-color: #dc3545; /* Darker red background on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* At the bottom of CheckCleanerSchedule.css */
+.ccs-float-slot,
+.ccs-calendar-cleaners .ccs-float-slot {
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-bottom: 4px;
+  font-size: 0.98rem;
+  display: inline-block;
+  border: 1.5px solid transparent;
+}
+
+.ccs-float-free,
+.ccs-calendar-cleaners .ccs-float-free {
+  background: #e7fbe7;
+  color: #218838;
+  border-color: #b8e6b8;
+}
+
+.ccs-float-busy,
+.ccs-calendar-cleaners .ccs-float-busy {
+  background: #ffeaea;
+  color: #c0392b;
+  border-color: #f5b7b1;
+}
+
+.ccs-background {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.ccs-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.ccs-step .ccs-subtitle .fa-calendar-alt,
+.ccs-step .ccs-subtitle:has(.fa-calendar-alt) {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+.ccs-date-label-text {
+  font-weight: 400;   /* Not bold */
+  font-size: 1rem;    /* Adjust as needed */
+  color: #333;        /* Adjust as needed */
+  margin-bottom: 6px;
+}
+
+.ccs-subtitle-cleaners {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: -3px;
+}
+.ccs-show-free-label {
+  margin-left: 20px; /* Adjust as needed */
+  font-size: 1rem;
+}
+
+.ccs-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 12px;
+}
+.ccs-section-title-team-cleaners {
+  margin-left: 30 px; /* Adjust as needed */
+  font-size: 1rem;
+  margin-bottom: -10px;
+}
+
+/* Large screens (≤1200px) */
+@media (max-width: 1200px) {
+  .ccs-container {
+    max-width: 95vw;
+    padding: 24px 12px;
+  }
+  .ccs-calendar {
+    gap: 10px;
+  }
+}
+
+/* Tablets (≤900px) */
+@media (max-width: 900px) {
+  .ccs-container {
+    padding: 16px 6px;
+    border-radius: 12px;
+  }
+  .ccs-title {
+    font-size: 1.3rem;
+  }
+  .ccs-calendar-day {
+    min-height: 90px;
+    padding: 10px;
+  }
+  .ccs-card {
+    padding: 12px;
+  }
+}
+
+/* Small tablets and large phones (≤768px) */
+@media (max-width: 768px) {
+  .ccs-container {
+    margin: 20px auto;
+    padding: 8px 2vw;
+    border-radius: 8px;
+  }
+  .ccs-header-row {
+    min-height: 36px;
+    margin-bottom: 12px;
+  }
+  .ccs-title {
+    font-size: 1.1rem;
+  }
+  .ccs-calendar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .ccs-calendar-day {
+    min-height: 70px;
+    padding: 8px;
+    font-size: 0.95em;
+  }
+  .ccs-card {
+    padding: 8px;
+  }
+  .ccs-section-title-team-cleaners {
+    margin-left: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .ccs-container {
+    margin: 0;
+    padding: 2vw 1vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .ccs-header-row {
+    min-height: 28px;
+    margin-bottom: 6px;
+  }
+  .ccs-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .ccs-calendar {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .ccs-calendar-day {
+    min-height: 50px;
+    padding: 5px;
+    font-size: 0.9em;
+  }
+  .ccs-card {
+    padding: 4px;
+    margin-bottom: 10px;
+  }
+  .ccs-section-title-team-cleaners {
+    margin-left: 4px;
+    font-size: 0.9rem;
+  }
+  .ccs-actions-row {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .ccs-service-button,
+  .ccs-view-button,
+  .ccs-reset-button,
+  .ccs-export-button,
+  .ccs-confirm-button {
+    width: 100%;
+    font-size: 0.95em;
+    padding: 8px 0;
+  }
+}

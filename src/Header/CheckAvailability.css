@@ -1,0 +1,265 @@
+/* =========================
+   MAIN STYLES
+   ========================= */
+
+/* General Page Styling */
+.check-availability-page {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Page Title */
+.check-availability-page h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+/* Unique Form Group Styling */
+.check-availability-form-group {
+  margin-bottom: 20px;
+}
+
+.check-availability-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.check-availability-form-group select,
+.check-availability-form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+.check-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-btn:hover {
+  background-color: #218838;
+}
+
+/* Available Cleaners Section */
+.available-cleaners {
+  margin-top: 40px;
+}
+
+.available-cleaners h3 {
+  font-size: 20px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.available-cleaners ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.available-cleaners li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+}
+
+/* No Cleaners Message */
+.available-cleaners p {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+}
+
+/* Back Arrow Container */
+.back-arrow-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-arrow:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+/* Tooltip Text */
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  font-size: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show Tooltip on Hover */
+.back-arrow-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-notification {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* =========================
+   MEDIA QUERIES SECTION
+   ========================= */
+
+/* Large screens (≤1024px) */
+@media (max-width: 1024px) {
+  .check-availability-page {
+    max-width: 90vw;
+    padding: 16px;
+  }
+  .available-cleaners {
+    margin-top: 30px;
+  }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .check-availability-page {
+    max-width: 98vw;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .check-availability-page h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .available-cleaners h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .available-cleaners li {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .check-btn {
+    font-size: 15px;
+    padding: 10px 8px;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .check-availability-page {
+    max-width: 100vw;
+    margin: 0;
+    padding: 4vw 2vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .check-availability-page h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+  .check-availability-form-group label {
+    font-size: 14px;
+  }
+  .check-availability-form-group select,
+  .check-availability-form-group input {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  .check-btn {
+    font-size: 14px;
+    padding: 8px 4px;
+    border-radius: 6px;
+  }
+  .available-cleaners {
+    margin-top: 18px;
+  }
+  .available-cleaners h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  .available-cleaners li {
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  .back-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .tooltip-text {
+    font-size: 11px;
+    width: 90px;
+    padding: 4px 6px;
+    border-radius: 4px;
+  }
+  .custom-notification {
+    font-size: 13px;
+    padding: 8px 8px;
+    border-radius: 3px;
+  }
+}

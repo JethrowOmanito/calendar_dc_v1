@@ -1,0 +1,164 @@
+.register-service-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-service-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #28a745;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.form-group {
+  margin-bottom: 1.1rem;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-group label {
+  color: #444;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #fafbfc;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+.service-btn {
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem 0;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+  letter-spacing: 0.01em;
+  margin-top: 10px;
+}
+
+.service-btn:hover:not(:disabled),
+.service-btn:focus:not(:disabled) {
+  background-color: #218838;
+  box-shadow: 0 4px 16px rgba(40, 167, 69, 0.18), 0 2px 8px rgba(0,0,0,0.12);
+  transform: translateY(-2px) scale(1.01);
+  outline: none;
+}
+
+.service-btn:disabled {
+  background-color: #b7e1c2;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.service-message {
+  margin-top: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #e63946;
+  font-size: 1rem;
+}
+
+.service-message:empty {
+  display: none;
+}
+
+.register-service-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================
+   MEDIA QUERIES SECTION
+   ========================= */
+
+@media (max-width: 700px) {
+  .register-service-container {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    border-radius: 8px;
+  }
+  .register-service-container h2 {
+    font-size: 1.3rem;
+  }
+  .form-group,
+  .service-btn {
+    max-width: 100vw;
+  }
+  .service-btn {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-service-container {
+    max-width: 100vw;
+    margin: 10px 0;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .register-service-container h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+  .form-group {
+    max-width: 100vw;
+    gap: 0.15rem;
+  }
+  .form-group label {
+    font-size: 0.97rem;
+  }
+  .form-group input {
+    font-size: 0.97rem;
+    padding: 0.6rem 0.7rem;
+    border-radius: 5px;
+  }
+  .service-btn {
+    font-size: 0.98rem;
+    padding: 0.7rem 0;
+    border-radius: 6px;
+    margin-top: 7px;
+  }
+  .service-message {
+    font-size: 0.95rem;
+    margin-top: 0.7rem;
+  }
+}

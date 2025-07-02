@@ -1,0 +1,118 @@
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Overall Dashboard Layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  margin-top: 80px; /* Adjusted for header height */
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Main Content Container */
+.calendar-container {
+  flex: 1;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  min-width: 0;
+  transition: margin-left 0.3s;
+}
+
+/* Responsive margin for main content based on sidebar state */
+.dashboard-container.sidebar-expanded .calendar-container {
+  margin-left: 240px; /* Match expanded sidebar width */
+}
+.dashboard-container.sidebar-collapsed .calendar-container {
+  margin-left: 60px;  /* Match collapsed sidebar width */
+}
+
+/* Optional: Styling for CustomCalendar */
+.custom-calendar {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Notification Popup */
+.notification-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.notification-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* =========================
+   MEDIA QUERIES SECTION
+   ========================= */
+@media (max-width: 991.98px), (max-height: 600px) {
+  .dashboard-container.sidebar-expanded .calendar-container,
+  .dashboard-container.sidebar-collapsed .calendar-container {
+    margin-left: 0 !important;
+    padding: 16px 8px;
+  }
+  .dashboard-container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  .calendar-container {
+    padding: 16px 8px;
+  }
+}
+
+@media (max-width: 767.98px), (max-height: 450px) {
+  .dashboard-container {
+    flex-direction: column;
+    margin-top: 56px;
+  }
+  .calendar-container {
+    padding: 8px 2px;
+  }
+  .sidebar-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+}

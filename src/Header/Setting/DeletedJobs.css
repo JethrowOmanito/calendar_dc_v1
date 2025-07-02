@@ -1,0 +1,159 @@
+.deleted-jobs-header-row,
+.deleted-job-item-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 1.2fr 1.2fr 2fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.deleted-jobs-header-row {
+  background: #f0f4fa;
+  color: #000000;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.05em;
+  margin-bottom: 8px;
+}
+
+.deleted-job-item-row {
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(40, 60, 90, 0.07);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s, border 0.2s;
+  font-size: 1em;
+}
+
+.deleted-job-item-row:hover {
+  box-shadow: 0 6px 24px rgba(40, 60, 90, 0.13);
+  border: 1px solid #1976d2;
+}
+
+.service-type {
+  background: #e3f0fc;
+  color: #1976d2;
+  font-size: 0.98em;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-block;
+  width: fit-content;
+  min-width: 0;
+}
+
+.deleted-by {
+  color: #888;
+  font-size: 0.97em;
+}
+
+.deleted-note {
+  color: #444;
+  background: #f7f7fa;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-style: italic;
+  font-size: 0.98em;
+  max-width: 250px;
+  overflow-wrap: break-word;
+}
+
+.deleted-date {
+  color: #b71c1c;
+  font-size: 0.95em;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.deleted-jobs-list-container button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.deleted-jobs-list-container button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+.deleted-jobs-list-container button:not(:disabled):hover {
+  background: #1256a3;
+}
+
+/* =========================
+   MEDIA QUERIES SECTION
+   ========================= */
+
+@media (max-width: 1100px) {
+  .deleted-jobs-header-row,
+  .deleted-job-item-row {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    font-size: 0.98em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .deleted-jobs-header-row,
+  .deleted-job-item-row {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    font-size: 0.95em;
+    gap: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .deleted-note {
+    max-width: 180px;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 700px) {
+  .deleted-jobs-header-row,
+  .deleted-job-item-row {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    font-size: 0.92em;
+    gap: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .deleted-note {
+    max-width: 120px;
+    font-size: 0.92em;
+  }
+}
+
+@media (max-width: 500px) {
+  .deleted-jobs-header-row,
+  .deleted-job-item-row {
+    grid-template-columns: 1fr 2fr 1fr;
+    font-size: 0.9em;
+    gap: 2px;
+    padding: 6px 2px;
+  }
+  .deleted-jobs-header-row {
+    border-radius: 6px 6px 0 0;
+    padding: 8px 2px;
+  }
+  .deleted-job-item-row {
+    border-radius: 0 0 6px 6px;
+    padding: 10px 2px;
+  }
+  .deleted-note {
+    max-width: 80px;
+    font-size: 0.9em;
+    padding: 4px 6px;
+  }
+  .deleted-jobs-list-container button {
+    font-size: 0.95em;
+    padding: 5px 8px;
+    border-radius: 4px;
+  }
+}
